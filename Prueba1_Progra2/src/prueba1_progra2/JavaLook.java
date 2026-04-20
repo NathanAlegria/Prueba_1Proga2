@@ -39,7 +39,7 @@ public class JavaLook {
             }
         }
     }
-
+ 
     public static void login(Scanner lea) {
         System.out.println("Correo:");
         String correo = lea.next();
@@ -121,9 +121,9 @@ public class JavaLook {
         }
     }
 
-     public static void enviarCorreo(Scanner sc) {
+     public static void enviarCorreo(Scanner lea) {
         System.out.print("Destinatario: ");
-        String destino = sc.nextLine();
+        String destino = lea.next();
 
         EmailAccount receptor = null;
 
@@ -140,16 +140,12 @@ public class JavaLook {
         }
 
         System.out.print("Asunto: ");
-        String asunto = sc.nextLine();
+        String asunto = lea.next();
 
         System.out.print("Contenido: ");
-        String contenido = sc.nextLine();
+        String contenido = lea.next();
 
-        Email correo = new Email(
-                cuentaActiva.getDireccion(),
-                asunto,
-                contenido
-        );
+        Email correo = new Email(cuentaActiva.getDireccion(),asunto,contenido);
 
         if (receptor.recibirCorreo(correo)) {
             System.out.println("Correo enviado");
