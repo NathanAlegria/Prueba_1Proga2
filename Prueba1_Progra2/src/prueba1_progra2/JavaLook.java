@@ -90,7 +90,7 @@ public class JavaLook {
         System.out.println("2. Mandar correo");
         System.out.println("3. Leer correo");
         System.out.println("4. Limpiar inbox");
-        System.out.println("5. Cerrar sesión");
+        System.out.println("5. Cerrar sesion");
 
         int op = lea.nextInt();
         lea.nextLine();
