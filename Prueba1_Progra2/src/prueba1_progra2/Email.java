@@ -9,13 +9,13 @@ package prueba1_progra2;
  * @author Nathan
  */
 public class Email {
-    
+
     private String emisor;
     private String asunto;
     private String contenido;
     private boolean leido;
 
-    public Email(String emisor, String asunto, String contenido, boolean leido) {
+    public Email(String emisor, String asunto, String contenido) {
         this.emisor = emisor;
         this.asunto = asunto;
         this.contenido = contenido;
@@ -37,12 +37,12 @@ public class Email {
     public boolean isLeido() {
         return leido;
     }
-    
-    public void marcarleido(){
-        leido=true;
+
+    public void marcarLeido() {
+        leido = true;
     }
-    
-    public void imprimir(){
-        System.out.println("De:"+emisor+"\nAsunto:"+asunto+"\n"+contenido);
+
+    public void imprimir() {
+        System.out.println("De:" + emisor + "\nAsunto:" + asunto + "\n" + contenido);
     }
 }
